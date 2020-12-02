@@ -4,8 +4,10 @@
   "description": "A bot for gacha",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js",
-    "devStart": "nodemon bot.js"
+    "start": "webpack-dev-server --mode development --hot --open --port $PORT",
+    "devStart": "nodemon bot.js",
+    "build": "npm i -dev && webpack --mode production",
+    "heroku-postbuild": "npm build"
   },
   "keywords": [],
   "author": "",
